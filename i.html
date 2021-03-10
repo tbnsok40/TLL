@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="i.css">
+<div class="progress-container">
+    <div class="progress-bar" id="indicator"></div>
+
+</div>
+
+<script>
+    window.onscroll = function() {myfunction()};
+
+    function myfunction(){
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll - height) * 100;
+        document.getElementById('indicator').style.width = scrolled + "%"
+    }
+</script>
+
